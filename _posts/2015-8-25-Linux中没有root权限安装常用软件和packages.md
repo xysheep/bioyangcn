@@ -33,7 +33,7 @@ make install
 ```
 这个时候应该就可以用了。如果是第一次安装软件，可能需要重启terminal。
 
-能下载到源码，且需要安装依赖包
+###### 能下载到源码，且需要安装依赖包
 
 这是比较可恶的一种，很多时候依赖包还不止一两个，非常浪费时间。比如用得比较多的R，一般来说就得手动安装libpng, libreadline, libx11等等。下面以R为例。假设我的电脑上还需要安装libreadline。首先在libreadline的官网下载源码包，然后用第二类中的方法安装这个包。记得configure时把prefix设为~/.local。
 
@@ -46,7 +46,7 @@ make install
 ```
 这里在configure一步指定了两个环境变量，LDFLAGS和CPPFLAGS。意思是到这些位置去找依赖库。这里面需要说明的是，在64位的linux系统中，这一步不能通过修改.bash_profile实现。如果谁有更好的方法欢迎交流。
 
-安装python和R的packages
+###### 安装python和R的packages
 
 如果按照上面的步骤安装R，那么R的packages可以直接用install.packages()正常安装不需要多说。python略有不同。
 
