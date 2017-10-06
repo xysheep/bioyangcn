@@ -8,16 +8,18 @@ title: Linux中没有root权限安装常用软件和packages
 
 ###### 直接能下载到可执行文件
 从最简单的说起，直接下载下来就是可执行的binary文件。首先在自己的home目录下建立一个新的目录叫做bin。然后运行下面代码
-
+``` bash
 echo 'export PATH=$HOME/bin:$PATH' >> ~/.bash_profile
+```
 上面步骤只需要做一次，以后安装软件不需要做。然后把下载到的所有binary文件复制到~/bin目录下面去就好。重新启动terminal就可以了。
 
 ###### 能下载到源码，且不需要安装依赖包
 然后说第二种情况。有源码，且不需要安装依赖包。首先在自己的home目录下建一个文件夹".local"，并把这个目录添加到.bash_profile中。这一步只需要做一次，以后安装软件不再需要做。
-
+``` bash
 cd ~
 mkdir .local
 echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bash_profile
+```
 然后解压下载到的软件源码并进入目录。如果是tar.gz格式，用tar zxvf解压。如果是tar.bz2格式，用tar jxvf解压。如果是zip格式，就用unzip解压（有的服务器没有unzip，直接传到windows下解压）。
 ``` bash
 tar zxvf software.tar.gz
@@ -58,8 +60,8 @@ python setup.py install --user
 ```
 
 最后，再回到R的packages上。虽然前面说R的packages可以直接安装，但是可能到如下问题。安装R package “curl”和“xml”时，会报错提示需要依赖库libcurl和libxml2。这两个库不需要在编译R的时候安装，但是要用curl和xml两个R package的时候就需要用到。这两个package的安装跟前面“能下载到源码，且不需要安装依赖包”中的内容类似。不同的地方是安装libxml2需要额外设置环境变量指向python的库。运行以下语句
-
-
+``` bash
 echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.local/lib:$HOME/.local/lib/python2.7' >> ~/.bash_profile
 echo 'export C_INCLUDE_PATH=$C_INCLUDE_PATH:$HOME/.local/include:$HOME/.local/include/python2.7' >> ~/.bash_profile
+```
 以上语句运行完毕后，libcurl和libxml2都可以被R直接调用。安装xml和curl的包到此成功
