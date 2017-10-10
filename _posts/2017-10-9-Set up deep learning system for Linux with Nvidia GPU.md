@@ -18,8 +18,8 @@ Then, we can [set up deep learning environments](#Set up deep learning environme
 - [cntk (used as backend of Keras)](#CNTK)
 + [Install frequently used packages that cannot directly installed from conda](#Install frequently used packages)
   - [opencv](#opencv)
-------------
 <!--more-->
+
 
 ## Install Prerequisite
 ### Install Nvidia driver
