@@ -11,13 +11,13 @@ To prepare deep learning system in Linux with Nvidia GPU, we need to install the
 Then, we can [set up deep learning environments](#Set up deep learning environment):
 - [Install conda: Anaconda/miniconda](#Install Conda)
 - [Create a conda environment](#Create a conda environment)
-- [Install deep learning platforms](#Install deep learning platforms)
--- [Tensorflow](#tensorflow)
--- [Keras](#Keras)
--- [pytorch](#pytorch)
--- [cntk (used as backend of Keras)](#CNTK)
-- [Install frequently used packages that cannot directly installed from conda](#Install frequently used packages)
--- [opencv](#opencv)
++ [Install deep learning platforms](#Install deep learning platforms)
+  - [Tensorflow](#tensorflow)
+  - [Keras](#Keras)
+  - [pytorch](#pytorch)
+- [cntk (used as backend of Keras)](#CNTK)
++ [Install frequently used packages that cannot directly installed from conda](#Install frequently used packages)
+  - [opencv](#opencv)
 ------------
 <!--more-->
 ## Install Prerequisite
