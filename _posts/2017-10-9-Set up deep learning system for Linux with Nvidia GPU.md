@@ -19,6 +19,9 @@ Then, we can [set up deep learning environments](#Set up deep learning environme
 - [Install frequently used packages that cannot directly installed from conda](#Install frequently used packages)
 -- [opencv](#opencv)
 <!--more-->
+
+
+
 ## Install Prerequisite
 ### Install Nvidia driver
 To download GPU driver, we can go to this [link](http://www.nvidia.com/Download/index.aspx "link"), choose our GPU/operation, and click serach (like shown in the following figure). Then we can download the correspond driver. For a linux with GTX Titan X, the newest driver name should be **NVIDIA-Linux-x86_64-384.90.run** as date of 2017-10-09.
