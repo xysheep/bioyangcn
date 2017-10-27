@@ -1,6 +1,6 @@
 ---
 layout: default
-title: home
+title: 主页
 permalink: /home/
 ---
 <div>
@@ -10,19 +10,4 @@ permalink: /home/
   生命科学系<br />
   佐治亚理工学院<br />
 </p>
-<div>
-<br /><br /><br />
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
