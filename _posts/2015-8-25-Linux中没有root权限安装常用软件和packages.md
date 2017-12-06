@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Linux中没有root权限安装常用软件和packages
-tags: Linux
 excerpt_separator: <!--more-->
 ---
 ### 没有root权限安装常用软件
